@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Instituto João de Barro | Site em construção</title>
+<meta name="description" content="O novo site do Instituto João de Barro, de Rondonópolis–MT, está em construção. Toda ação constrói!">
+<meta name="theme-color" content="#1d1c17">
+<meta property="og:title" content="Instituto João de Barro">
+<meta property="og:description" content="Nosso novo site está em construção. Toda ação constrói!">
+<meta property="og:image" content="img/fundo.jpg">
+<link rel="icon" href="img/icon.png">
+<style>
+  @font-face{font-family:Poppins;font-weight:600;font-display:swap;src:url(img/poppins-latin-600-normal.woff2) format("woff2")}
+  @font-face{font-family:Poppins;font-weight:800;font-display:swap;src:url(img/poppins-latin-800-normal.woff2) format("woff2")}
+  @font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(img/inter-latin-400-normal.woff2) format("woff2")}
+  :root{--noite:#1d1c17;--marrom:#8c7558;--caramelo:#bfa37e;--areia:#f2ebdd;--ease:cubic-bezier(.2,.7,.1,1);color-scheme:dark}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:Inter,"Segoe UI",system-ui,sans-serif;color:var(--areia);background:var(--noite);-webkit-font-smoothing:antialiased}
+  .fundo{position:fixed;inset:0;background:url(img/fundo.jpg) 70% 35%/cover;transform:scale(1.06);animation:zoom 3s var(--ease) forwards}
+  .fundo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,28,23,.95) 0%,rgba(29,28,23,.7) 50%,rgba(29,28,23,.35) 100%)}
+  main{position:relative;min-height:100%;display:flex;flex-direction:column;justify-content:space-between;gap:48px;
+    padding:max(40px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) max(32px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));
+    max-width:1200px;margin:0 auto}
+  @media(min-width:900px){main{padding-left:80px;padding-right:80px}}
+  .logo{width:min(280px,62vw);height:auto}
+  .paineis{display:flex;flex-wrap:wrap;max-width:1100px}
+  .marrom{background:var(--marrom);padding:clamp(28px,4vw,52px);border-radius:24px 0 0 24px;flex:1 1 400px;min-width:0}
+  .escuro{background:rgba(29,28,23,.88);padding:clamp(28px,4vw,52px);border-radius:0 24px 24px 0;flex:1 1 340px;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:22px}
+  @media(max-width:860px){.marrom{border-radius:24px 24px 0 0}.escuro{border-radius:0 0 24px 24px}}
+  .k{font-family:Poppins,sans-serif;font-weight:600;font-size:13px;letter-spacing:.28em;text-transform:uppercase}
+  h1{font-family:Poppins,sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(38px,5vw,70px);line-height:.96;letter-spacing:-.03em;margin-top:16px}
+  .slogan{font-size:20px;margin-top:18px;opacity:.9}
+  .escuro p{font-size:18px;line-height:1.6;color:#d7cebc;max-width:40ch}
+  .btn{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;font-family:Poppins,sans-serif;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;
+    padding:15px 26px;border-radius:999px;text-decoration:none;color:var(--areia);border:1px solid rgba(242,235,221,.5);transition:background .25s,transform .25s var(--ease)}
+  .btn:hover{background:rgba(191,163,126,.18);transform:translateY(-2px)}
+  .btn:focus-visible{outline:2px solid var(--caramelo);outline-offset:3px}
+  .barra{height:3px;width:100%;max-width:280px;background:rgba(242,235,221,.15);border-radius:3px;overflow:hidden}
+  .barra i{display:block;height:100%;width:40%;background:var(--caramelo);border-radius:3px;animation:obra 2.4s var(--ease) infinite alternate}
+  footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#a79e8c}
+  .entra{animation:entra .9s var(--ease) both;animation-delay:var(--d,0s)}
+  @keyframes entra{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  @keyframes zoom{to{transform:scale(1)}}
+  @keyframes obra{from{transform:translateX(-10%)}to{transform:translateX(160%)}}
+  @media(prefers-reduced-motion:reduce){.entra,.fundo,.barra i{animation:none;transform:none}}
+</style>
+</head>
+<body>
+<div class="fundo" aria-hidden="true"></div>
+<main>
+  <img class="logo entra" src="img/logo-claro.png" alt="Instituto João de Barro" width="541" height="167">
+
+  <div class="paineis">
+    <section class="marrom entra" style="--d:.15s">
+      <p class="k" style="opacity:.85">Rondonópolis – MT</p>
+      <h1>Site em<br>construção</h1>
+      <p class="slogan">Toda ação constrói!</p>
+    </section>
+    <section class="escuro entra" style="--d:.35s">
+      <p>Estamos construindo o novo site do Instituto João de Barro, com nossos projetos, notícias e o Portal da Transparência.</p>
+      <div class="barra" aria-hidden="true"><i></i></div>
+      <!-- EDITAR: botões de contato. Copie a linha do Instagram e troque o link para WhatsApp/e-mail -->
+      <a class="btn" href="https://www.instagram.com/institutojoaodebarromt/" target="_blank" rel="noopener">Acompanhe no Instagram</a>
+    </section>
+  </div>
+
+  <footer class="entra" style="--d:.5s">
+    <span>© 2026 Instituto João de Barro</span>
+    <span>Site por MDS Soft Sites</span>
+  </footer>
+</main>
+</body>
+</html>
