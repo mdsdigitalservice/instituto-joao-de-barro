@@ -24,8 +24,10 @@
     padding:max(40px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) max(32px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));
     max-width:1200px;margin:0 auto}
   @media(min-width:900px){main{padding-left:80px;padding-right:80px}}
+  .primeira{display:flex;flex-direction:column;gap:40px;min-height:calc(100vh - max(40px,env(safe-area-inset-top)));min-height:calc(100svh - max(40px,env(safe-area-inset-top)))}
+  .primeira .paineis{margin-block:auto}
   .logo{width:min(320px,70vw);height:auto}
-  @media(max-width:760px){.logo{width:min(300px,82vw);align-self:center;margin-top:8px}}
+  @media(max-width:760px){.logo{width:min(300px,82vw);align-self:center;margin-top:8px}.primeira{gap:28px;padding-bottom:12px}}
   .paineis{display:flex;flex-wrap:wrap;max-width:1100px}
   .marrom{background:var(--marrom);padding:clamp(28px,4vw,52px);border-radius:24px 0 0 24px;flex:1 1 400px;min-width:0}
   .escuro{background:rgba(29,28,23,.88);padding:clamp(28px,4vw,52px);border-radius:0 24px 24px 0;flex:1 1 340px;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:22px}
@@ -129,6 +131,7 @@
 <body>
 <div class="fundo" aria-hidden="true"></div>
 <main>
+  <div class="primeira">
   <img class="logo entra" src="img/logo-claro.png" alt="Instituto João de Barro" width="541" height="167">
 
   <div class="paineis">
@@ -147,6 +150,7 @@
         <a class="btn so-ico ir-docs" href="#transparencia" aria-label="Ver documentos oficiais" title="Documentos oficiais"><svg class="ico-seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v15M6 13l6 6 6-6"/></svg></a>
       </div>
     </section>
+  </div>
   </div>
 
 
