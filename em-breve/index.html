@@ -60,7 +60,20 @@
   .doc p:last-child{font-size:15px;line-height:1.55;color:#bdb4a2;margin-top:6px}
   .acoes{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
   .acoes .btn{align-self:auto;padding:12px 20px;font-size:13px}
-  @media(max-width:760px){.doc{grid-template-columns:auto 1fr}.doc .ico{width:42px;height:52px}.acoes{grid-column:1/-1}.acoes .btn{flex:1;justify-content:center}}
+  .acoes svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  @media(max-width:760px){
+    .transp{padding:26px 18px;border-radius:22px}
+    .docs{gap:10px}
+    .doc{grid-template-columns:40px 1fr auto;gap:14px;align-items:start;padding:16px 14px 16px 16px;border-radius:16px}
+    .doc .ico{width:40px;height:48px;font-size:10px;border-radius:7px}
+    .doc .meta{font-size:10px;letter-spacing:.12em}
+    .doc h3{font-size:16px;margin-top:4px}
+    .doc p:last-child{font-size:13.5px;line-height:1.5;margin-top:4px}
+    .acoes{flex-direction:column;flex-wrap:nowrap;gap:8px;align-self:center}
+    .acoes .btn{width:44px;height:44px;padding:0;justify-content:center;flex:none}
+    .acoes .txt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+    .acoes .btn:active{transform:scale(.94)}
+  }
   footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#a79e8c}
   .entra{animation:entra .9s var(--ease) both;animation-delay:var(--d,0s)}
   @keyframes entra{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
@@ -107,22 +120,22 @@
       <li class="doc">
         <span class="ico" aria-hidden="true">PDF</span>
         <div><p class="meta">Cadastro · 23/01/2026</p><h3>Comprovante de Inscrição no CNPJ</h3><p>Cartão CNPJ emitido pela Receita Federal. Associação privada sem fins lucrativos, aberta em 10/04/2013.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/cartao-cnpj.pdf" target="_blank" rel="noopener">Visualizar</a><a class="btn" href="documentos/cartao-cnpj.pdf" download>Baixar</a></div>
+        <div class="acoes"><a class="btn cheio" href="documentos/cartao-cnpj.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Comprovante de Inscrição no CNPJ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/cartao-cnpj.pdf" download aria-label="Baixar: Comprovante de Inscrição no CNPJ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
       </li>
       <li class="doc">
         <span class="ico" aria-hidden="true">PDF</span>
         <div><p class="meta">Constituição · 21/10/2024</p><h3>Ata da Assembleia Geral Extraordinária e Estatuto Social</h3><p>Alteração da denominação para Instituto João de Barro – IJB, objetivos e endereço, com o Estatuto Social registrado em cartório.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/ata-age-2024-alteracao-denominacao.pdf" target="_blank" rel="noopener">Visualizar</a><a class="btn" href="documentos/ata-age-2024-alteracao-denominacao.pdf" download>Baixar</a></div>
+        <div class="acoes"><a class="btn cheio" href="documentos/ata-age-2024-alteracao-denominacao.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Ata da Assembleia Geral Extraordinária e Estatuto Social"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/ata-age-2024-alteracao-denominacao.pdf" download aria-label="Baixar: Ata da Assembleia Geral Extraordinária e Estatuto Social"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
       </li>
       <li class="doc">
         <span class="ico" aria-hidden="true">PDF</span>
         <div><p class="meta">Diretoria · 30/12/2025</p><h3>Ata de Recomposição da Diretoria</h3><p>Eleição da Diretoria Executiva para o mandato até 31/05/2027. Registrada no 1º Serviço Notarial e Registral de Cuiabá em 04/03/2026.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/ata-recomposicao-diretoria-2026.pdf" target="_blank" rel="noopener">Visualizar</a><a class="btn" href="documentos/ata-recomposicao-diretoria-2026.pdf" download>Baixar</a></div>
+        <div class="acoes"><a class="btn cheio" href="documentos/ata-recomposicao-diretoria-2026.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Ata de Recomposição da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/ata-recomposicao-diretoria-2026.pdf" download aria-label="Baixar: Ata de Recomposição da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
       </li>
       <li class="doc">
         <span class="ico" aria-hidden="true">PDF</span>
         <div><p class="meta">Diretoria · 04/03/2026</p><h3>Termo de Posse da Diretoria</h3><p>Posse da Presidente e da Diretoria eleitas, registrada no 1º Serviço Notarial e Registral de Cuiabá.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/termo-de-posse-diretoria-2026.pdf" target="_blank" rel="noopener">Visualizar</a><a class="btn" href="documentos/termo-de-posse-diretoria-2026.pdf" download>Baixar</a></div>
+        <div class="acoes"><a class="btn cheio" href="documentos/termo-de-posse-diretoria-2026.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Termo de Posse da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/termo-de-posse-diretoria-2026.pdf" download aria-label="Baixar: Termo de Posse da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
       </li>
     </ul>
   </section>
