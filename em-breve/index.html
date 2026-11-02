@@ -53,27 +53,38 @@
   .ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px 28px;margin-top:28px;padding:22px 0;border-top:1px solid rgba(242,235,221,.14);border-bottom:1px solid rgba(242,235,221,.14)}
   .ficha dt,.doc .meta{font-family:Poppins,sans-serif;font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--caramelo)}
   .ficha dd{margin-top:6px;font-size:16px}
-  .docs{list-style:none;display:grid;gap:14px;margin-top:28px}
-  .doc{display:grid;grid-template-columns:auto 1fr auto;gap:18px 22px;align-items:center;padding:20px 22px;border:1px solid rgba(242,235,221,.14);border-radius:18px;background:rgba(242,235,221,.03)}
-  .doc .ico{display:grid;place-items:center;width:50px;height:62px;border-radius:8px;background:var(--marrom);font:600 12px/1 Poppins,sans-serif;letter-spacing:.08em}
-  .doc h3{font-family:Poppins,sans-serif;font-weight:600;font-size:18px;line-height:1.3;margin-top:6px}
-  .doc p:last-child{font-size:15px;line-height:1.55;color:#bdb4a2;margin-top:6px}
-  .acoes{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-  .acoes .btn{align-self:auto;padding:12px 20px;font-size:13px}
-  .acoes svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .docs{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,470px),1fr));gap:12px;margin-top:28px}
+  .doc{position:relative;display:grid;grid-template-columns:auto 1fr auto auto;gap:18px;align-items:center;padding:14px 14px 14px 14px;border:1px solid rgba(242,235,221,.12);border-radius:18px;background:rgba(242,235,221,.035);transition:background .25s,border-color .25s,transform .25s var(--ease);-webkit-tap-highlight-color:transparent}
+  .doc:hover{background:rgba(242,235,221,.07);border-color:rgba(191,163,126,.45)}
+  .doc:active{transform:scale(.985)}
+  .doc:focus-within{border-color:var(--caramelo)}
+  .capa{width:62px;height:auto;aspect-ratio:200/283;object-fit:cover;object-position:top;border-radius:6px;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .3s var(--ease)}
+  .doc:hover .capa{transform:rotate(-2deg) scale(1.04)}
+  .doc-txt{min-width:0}
+  .doc .meta{font-family:Poppins,sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--caramelo)}
+  .doc h3{font-family:Poppins,sans-serif;font-weight:600;font-size:16.5px;line-height:1.3;margin-top:5px}
+  .doc-link{color:inherit;text-decoration:none;outline:none}
+  .doc-link::after{content:"";position:absolute;inset:0;border-radius:inherit}
+  .doc .desc{font-size:14px;line-height:1.5;color:#bdb4a2;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .doc .info{font-size:12px;color:#8f8775;margin-top:6px}
+  .seta{width:20px;height:20px;fill:none;stroke:#a79e8c;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease),stroke .25s}
+  .doc:hover .seta{transform:translateX(3px);stroke:var(--caramelo)}
+  .baixar{position:relative;z-index:1;display:grid;place-items:center;width:42px;height:42px;border-radius:999px;border:1px solid rgba(242,235,221,.22);color:var(--areia);transition:background .2s,border-color .2s}
+  .baixar:hover{background:rgba(191,163,126,.2);border-color:var(--caramelo)}
+  .baixar:active{transform:scale(.92)}
+  .baixar:focus-visible{outline:2px solid var(--caramelo);outline-offset:2px}
+  .baixar svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   @media(max-width:760px){
-    .transp{padding:24px 16px;border-radius:22px}
+    .transp{padding:24px 14px;border-radius:22px}
     .docs{gap:8px;margin-top:22px}
-    .doc{grid-template-columns:34px 1fr;gap:4px 12px;align-items:start;padding:14px;border-radius:14px}
-    .doc .ico{width:34px;height:42px;font-size:9px;border-radius:6px;grid-row:span 2}
-    .doc .meta{font-size:9.5px;letter-spacing:.12em}
-    .doc h3{font-size:15px;line-height:1.25;margin-top:3px}
-    .doc p:last-child{font-size:13px;line-height:1.45;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-    .acoes{grid-column:2;flex-wrap:nowrap;justify-content:flex-start;gap:8px;margin-top:8px}
-    .acoes .btn{width:40px;height:40px;padding:0;justify-content:center;flex:none}
-    .acoes svg{width:17px;height:17px}
-    .acoes .txt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-    .acoes .btn:active{transform:scale(.94)}
+    .doc{grid-template-columns:auto 1fr auto;gap:14px;padding:10px 10px 10px 10px;border-radius:14px}
+    .seta{display:none}
+    .capa{width:46px;border-radius:5px}
+    .doc .desc{display:none}
+    .doc .meta{font-size:9.5px}
+    .doc h3{font-size:14.5px;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .doc .info{font-size:11.5px;margin-top:4px}
+    .baixar{width:40px;height:40px;border-color:transparent;background:rgba(242,235,221,.06)}
   }
   /* Leitor de PDF */
   html.leitor-aberto{overflow:hidden}
@@ -136,29 +147,59 @@
     </dl>
     <ul class="docs">
       <li class="doc">
-        <span class="ico" aria-hidden="true">PDF</span>
-        <div><p class="meta">Cadastro · 23/01/2026</p><h3>Comprovante de Inscrição no CNPJ</h3><p>Cartão CNPJ emitido pela Receita Federal. Associação privada sem fins lucrativos, aberta em 10/04/2013.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/cartao-cnpj.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Comprovante de Inscrição no CNPJ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/cartao-cnpj.pdf" download aria-label="Baixar: Comprovante de Inscrição no CNPJ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
+        <img class="capa" src="documentos/capas/cartao-cnpj.jpg" alt="" width="200" height="283" loading="lazy">
+        <div class="doc-txt">
+          <p class="meta">Cadastro<span> · 23/01/2026</span></p>
+          <h3><a class="doc-link" href="documentos/cartao-cnpj.pdf" target="_blank" rel="noopener">Comprovante de Inscrição no CNPJ</a></h3>
+          <p class="desc">Cartão CNPJ emitido pela Receita Federal. Associação privada sem fins lucrativos, aberta em 10/04/2013.</p>
+          <p class="info">PDF · 1 página</p>
+        </div>
+        <svg class="seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
+        <a class="baixar" href="documentos/cartao-cnpj.pdf" download aria-label="Baixar Comprovante de Inscrição no CNPJ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
       </li>
       <li class="doc">
-        <span class="ico" aria-hidden="true">PDF</span>
-        <div><p class="meta">Constituição · 21/10/2024</p><h3>Estatuto Social Consolidado</h3><p>Segunda Alteração Estatutária consolidada: denominação, sede, finalidades, órgãos de administração e regras de funcionamento do Instituto.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/estatuto-social-consolidado.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Estatuto Social Consolidado"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/estatuto-social-consolidado.pdf" download aria-label="Baixar: Estatuto Social Consolidado"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
+        <img class="capa" src="documentos/capas/estatuto-social-consolidado.jpg" alt="" width="200" height="283" loading="lazy">
+        <div class="doc-txt">
+          <p class="meta">Constituição<span> · 21/10/2024</span></p>
+          <h3><a class="doc-link" href="documentos/estatuto-social-consolidado.pdf" target="_blank" rel="noopener">Estatuto Social Consolidado</a></h3>
+          <p class="desc">Segunda Alteração Estatutária consolidada: denominação, sede, finalidades, órgãos de administração e regras de funcionamento do Instituto.</p>
+          <p class="info">PDF · 9 páginas</p>
+        </div>
+        <svg class="seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
+        <a class="baixar" href="documentos/estatuto-social-consolidado.pdf" download aria-label="Baixar Estatuto Social Consolidado"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
       </li>
       <li class="doc">
-        <span class="ico" aria-hidden="true">PDF</span>
-        <div><p class="meta">Constituição · 21/10/2024</p><h3>Ata da Assembleia Geral Extraordinária</h3><p>Assembleia que alterou a denominação de Instituto Brasil Benefícios para Instituto João de Barro – IJB, com novos objetivos e endereço, registrada em cartório.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/ata-age-2024-alteracao-denominacao.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Ata da Assembleia Geral Extraordinária"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/ata-age-2024-alteracao-denominacao.pdf" download aria-label="Baixar: Ata da Assembleia Geral Extraordinária"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
+        <img class="capa" src="documentos/capas/ata-age-2024-alteracao-denominacao.jpg" alt="" width="200" height="283" loading="lazy">
+        <div class="doc-txt">
+          <p class="meta">Constituição<span> · 21/10/2024</span></p>
+          <h3><a class="doc-link" href="documentos/ata-age-2024-alteracao-denominacao.pdf" target="_blank" rel="noopener">Ata da Assembleia Geral Extraordinária</a></h3>
+          <p class="desc">Assembleia que alterou a denominação de Instituto Brasil Benefícios para Instituto João de Barro – IJB, com novos objetivos e endereço, registrada em cartório.</p>
+          <p class="info">PDF · 31 páginas</p>
+        </div>
+        <svg class="seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
+        <a class="baixar" href="documentos/ata-age-2024-alteracao-denominacao.pdf" download aria-label="Baixar Ata da Assembleia Geral Extraordinária"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
       </li>
       <li class="doc">
-        <span class="ico" aria-hidden="true">PDF</span>
-        <div><p class="meta">Diretoria · 30/12/2025</p><h3>Ata de Recomposição da Diretoria</h3><p>Eleição da Diretoria Executiva para o mandato até 31/05/2027. Registrada no 1º Serviço Notarial e Registral de Cuiabá em 04/03/2026.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/ata-recomposicao-diretoria-2026.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Ata de Recomposição da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/ata-recomposicao-diretoria-2026.pdf" download aria-label="Baixar: Ata de Recomposição da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
+        <img class="capa" src="documentos/capas/ata-recomposicao-diretoria-2026.jpg" alt="" width="200" height="283" loading="lazy">
+        <div class="doc-txt">
+          <p class="meta">Diretoria<span> · 30/12/2025</span></p>
+          <h3><a class="doc-link" href="documentos/ata-recomposicao-diretoria-2026.pdf" target="_blank" rel="noopener">Ata de Recomposição da Diretoria</a></h3>
+          <p class="desc">Eleição da Diretoria Executiva para o mandato até 31/05/2027. Registrada no 1º Serviço Notarial e Registral de Cuiabá em 04/03/2026.</p>
+          <p class="info">PDF · 5 páginas</p>
+        </div>
+        <svg class="seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
+        <a class="baixar" href="documentos/ata-recomposicao-diretoria-2026.pdf" download aria-label="Baixar Ata de Recomposição da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
       </li>
       <li class="doc">
-        <span class="ico" aria-hidden="true">PDF</span>
-        <div><p class="meta">Diretoria · 04/03/2026</p><h3>Termo de Posse da Diretoria</h3><p>Posse da Presidente e da Diretoria eleitas, registrada no 1º Serviço Notarial e Registral de Cuiabá.</p></div>
-        <div class="acoes"><a class="btn cheio" href="documentos/termo-de-posse-diretoria-2026.pdf" target="_blank" rel="noopener" aria-label="Visualizar: Termo de Posse da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="txt">Visualizar</span></a><a class="btn" href="documentos/termo-de-posse-diretoria-2026.pdf" download aria-label="Baixar: Termo de Posse da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span class="txt">Baixar</span></a></div>
+        <img class="capa" src="documentos/capas/termo-de-posse-diretoria-2026.jpg" alt="" width="200" height="283" loading="lazy">
+        <div class="doc-txt">
+          <p class="meta">Diretoria<span> · 04/03/2026</span></p>
+          <h3><a class="doc-link" href="documentos/termo-de-posse-diretoria-2026.pdf" target="_blank" rel="noopener">Termo de Posse da Diretoria</a></h3>
+          <p class="desc">Posse da Presidente e da Diretoria eleitas, registrada no 1º Serviço Notarial e Registral de Cuiabá.</p>
+          <p class="info">PDF · 2 páginas</p>
+        </div>
+        <svg class="seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
+        <a class="baixar" href="documentos/termo-de-posse-diretoria-2026.pdf" download aria-label="Baixar Termo de Posse da Diretoria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
       </li>
     </ul>
   </section>
@@ -235,11 +276,11 @@
   }
   function pedirFechar(){ if(history.state&&history.state.leitor) history.back(); else encerrar(); }
 
-  document.querySelectorAll('.acoes .btn.cheio').forEach(function(a){
+  document.querySelectorAll('.doc-link').forEach(function(a){
     a.addEventListener('click',function(ev){
       if(ev.ctrlKey||ev.metaKey||ev.shiftKey) return;
       ev.preventDefault();
-      abrir(a.getAttribute('href'),a.closest('.doc').querySelector('h3').textContent,a);
+      abrir(a.getAttribute('href'),a.textContent,a);
     });
   });
   fechar.addEventListener('click',pedirFechar);
