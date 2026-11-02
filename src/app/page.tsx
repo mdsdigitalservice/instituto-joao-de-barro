@@ -130,11 +130,11 @@ export default async function Inicio() {
         <div className="wrap grade g2">
           <div>
             <p className="eyebrow">Transparência</p>
-            <h2 className="titulo" style={{ marginTop: 16 }}>Parcerias com <em>prestação de contas</em></h2>
+            <h2 className="titulo" style={{ marginTop: 16 }}>Documentos <em>abertos</em> à sociedade</h2>
           </div>
           <div>
             <p className="lead">
-              Publicamos os termos de fomento e convênios firmados com o poder público, com valores, números dos processos e vigência, conforme o art. 11 da Lei 13.019/2014.
+              Cartão CNPJ, estatuto, atas da diretoria e parcerias com o poder público: os documentos oficiais do Instituto ficam disponíveis para qualquer pessoa consultar e baixar.
             </p>
             <Link href="/transparencia" className="btn" style={{ marginTop: 28 }}>Acessar a Transparência</Link>
           </div>

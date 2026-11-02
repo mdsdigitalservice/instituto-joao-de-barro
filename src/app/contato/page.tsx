@@ -2,16 +2,18 @@ import type { Metadata } from "next";
 import { CabecaPagina } from "@/components/CabecaPagina";
 import { site, whatsappLink } from "@/content/site";
 
-export const metadata: Metadata = { title: "Contato", description: "Fale com o Instituto João de Barro em Rondonópolis–MT." };
+export const metadata: Metadata = { title: "Contato", description: "Fale com o Instituto João de Barro em Cuiabá–MT." };
 
 export default function Contato() {
   const zap = whatsappLink();
   const itens = [
     { rotulo: "Cidade", valor: site.cidade },
     site.endereco && { rotulo: "Endereço", valor: site.endereco },
-    site.telefone && { rotulo: "Telefone", valor: site.telefone },
+    site.telefone && { rotulo: "Telefone e WhatsApp", valor: site.telefone, href: `tel:+55${site.whatsapp}` },
     site.email && { rotulo: "E-mail", valor: site.email, href: `mailto:${site.email}` },
+    { rotulo: "CNPJ", valor: site.cnpj },
     { rotulo: "Instagram", valor: site.instagramUser, href: site.instagram },
+    { rotulo: "Facebook", valor: "/institutojoaodebarromt", href: site.facebook },
   ].filter(Boolean) as { rotulo: string; valor: string; href?: string }[];
 
   return (

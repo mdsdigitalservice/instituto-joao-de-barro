@@ -204,3 +204,23 @@ a.cartao:hover .img img { transform: scale(1.04); }
 .admin .miniaturas figure { position: relative; }
 .admin .miniaturas img { width: 92px; height: 92px; object-fit: cover; border-radius: 8px; }
 .admin .miniaturas button { position: absolute; top: 4px; right: 4px; border: 0; background: rgba(0, 0, 0, 0.65); color: #fff; border-radius: 50%; width: 24px; height: 24px; cursor: pointer; }
+
+/* Transparência: documentos oficiais */
+.ficha { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 18px 28px; padding: clamp(22px, 3vw, 32px); border-radius: var(--raio); background: var(--oliva); color: var(--areia); }
+.ficha dt { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--caramelo); }
+.ficha dd { margin-top: 6px; font-size: 17px; font-variant-numeric: tabular-nums; }
+.sub-titulo { font-size: clamp(26px, 3vw, 36px); margin: clamp(48px, 7vw, 80px) 0 20px; }
+.docs { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+.doc { display: grid; grid-template-columns: auto 1fr auto; gap: 20px 24px; align-items: center; background: #fffaf2; border: 1px solid var(--linha); border-radius: var(--raio); padding: clamp(18px, 2.6vw, 28px); }
+.doc-ico { display: grid; place-items: center; width: 56px; height: 68px; border-radius: 8px; background: var(--marrom); color: var(--areia); font: 700 13px/1 var(--f-titulo); letter-spacing: 0.08em; }
+.doc-meta { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texto-suave); }
+.doc h3 { font-family: var(--f-titulo); font-size: clamp(18px, 2vw, 21px); font-weight: 700; margin-top: 6px; line-height: 1.25; }
+.doc-txt > p:last-child { margin-top: 6px; color: var(--texto-suave); font-size: 15px; }
+.doc-acoes { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.doc-acoes .btn { margin: 0; }
+@media (max-width: 760px) {
+  .doc { grid-template-columns: auto 1fr; }
+  .doc-ico { width: 44px; height: 54px; font-size: 11px; }
+  .doc-acoes { grid-column: 1 / -1; justify-content: stretch; }
+  .doc-acoes .btn { flex: 1; justify-content: center; }
+}

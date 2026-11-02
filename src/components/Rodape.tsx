@@ -31,16 +31,17 @@ export function Rodape() {
             <ul>
               <li>{site.cidade}</li>
               {site.endereco && <li>{site.endereco}</li>}
-              {site.telefone && <li>{site.telefone}</li>}
+              {site.telefone && <li><a href={`tel:+55${site.whatsapp}`}>{site.telefone}</a></li>}
               {zap && <li><a href={zap} target="_blank" rel="noopener">WhatsApp</a></li>}
               {site.email && <li><a href={`mailto:${site.email}`}>{site.email}</a></li>}
-              <li><a href={site.instagram} target="_blank" rel="noopener">{site.instagramUser}</a></li>
+              <li><a href={site.instagram} target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href={site.facebook} target="_blank" rel="noopener">Facebook</a></li>
             </ul>
           </div>
         </div>
         <div className="base">
           <span>© {new Date().getFullYear()} {site.nome}{site.cnpj && ` · CNPJ ${site.cnpj}`}</span>
-          <span>Site por MDS Soft Sites</span>
+          <span>Desenvolvido por <a href="https://mdsdigital.com.br" target="_blank" rel="noopener">MDS Digital</a></span>
         </div>
       </div>
     </footer>

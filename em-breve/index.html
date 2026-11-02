@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Instituto João de Barro | Site em construção</title>
-<meta name="description" content="O novo site do Instituto João de Barro, de Rondonópolis–MT, está em construção. Toda ação constrói!">
+<meta name="description" content="O novo site do Instituto João de Barro, de Cuiabá–MT, está em construção. Toda ação constrói!">
 <meta name="theme-color" content="#1d1c17">
 <meta property="og:title" content="Instituto João de Barro">
 <meta property="og:description" content="Nosso novo site está em construção. Toda ação constrói!">
@@ -39,6 +39,12 @@
   .btn:focus-visible{outline:2px solid var(--caramelo);outline-offset:3px}
   .barra{height:3px;width:100%;max-width:280px;background:rgba(242,235,221,.15);border-radius:3px;overflow:hidden}
   .barra i{display:block;height:100%;width:40%;background:var(--caramelo);border-radius:3px;animation:obra 2.4s var(--ease) infinite alternate}
+  .botoes{display:flex;flex-wrap:wrap;gap:10px}
+  .botoes .btn{align-self:auto}
+  .btn.cheio{background:var(--marrom);border-color:var(--marrom)}
+  .btn.cheio:hover{background:#7a6449}
+  address{font-style:normal;font-size:14px;line-height:1.6;color:#a79e8c}
+  address a,footer a{color:inherit}
   footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#a79e8c}
   .entra{animation:entra .9s var(--ease) both;animation-delay:var(--d,0s)}
   @keyframes entra{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
@@ -54,21 +60,25 @@
 
   <div class="paineis">
     <section class="marrom entra" style="--d:.15s">
-      <p class="k" style="opacity:.85">Rondonópolis – MT</p>
+      <p class="k" style="opacity:.85">Cuiabá – MT</p>
       <h1>Site em<br>construção</h1>
       <p class="slogan">Toda ação constrói!</p>
     </section>
     <section class="escuro entra" style="--d:.35s">
       <p>Estamos construindo o novo site do Instituto João de Barro, com nossos projetos, notícias e o Portal da Transparência.</p>
       <div class="barra" aria-hidden="true"><i></i></div>
-      <!-- EDITAR: botões de contato. Copie a linha do Instagram e troque o link para WhatsApp/e-mail -->
-      <a class="btn" href="https://www.instagram.com/institutojoaodebarromt/" target="_blank" rel="noopener">Acompanhe no Instagram</a>
+      <div class="botoes">
+        <a class="btn cheio" href="https://wa.me/5565992151877?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Instituto%20Jo%C3%A3o%20de%20Barro." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://www.instagram.com/institutojoaodebarromt/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.facebook.com/institutojoaodebarromt/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <address>Av. Haiti esquina com Rua Caracas, nº 610, Sala 05 – Centro Empresarial América, Cuiabá – MT, CEP 78060-618<br><a href="tel:+5565992151877">+55 (65) 99215-1877</a></address>
     </section>
   </div>
 
   <footer class="entra" style="--d:.5s">
-    <span>© 2026 Instituto João de Barro</span>
-    <span>Site por MDS Soft Sites</span>
+    <span>© 2026 Instituto João de Barro · CNPJ 17.984.579/0001-77</span>
+    <span>Desenvolvido por <a href="https://mdsdigital.com.br" target="_blank" rel="noopener">MDS Digital</a></span>
   </footer>
 </main>
 </body>

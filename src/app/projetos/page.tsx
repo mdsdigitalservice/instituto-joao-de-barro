@@ -10,7 +10,7 @@ export default function Projetos() {
       <CabecaPagina
         eyebrow="Projetos"
         titulo={<>Ações que <em>constroem</em></>}
-        texto="Esporte, cultura e inclusão para crianças, jovens e famílias de Rondonópolis."
+        texto="Esporte, cultura e inclusão para crianças, jovens e famílias de Mato Grosso."
         foto="/img/futebol.jpg"
       />
       <section className="sec">

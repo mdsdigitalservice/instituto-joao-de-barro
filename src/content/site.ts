@@ -1,19 +1,21 @@
 // Dados gerais do Instituto. Campos vazios ("") não aparecem no site.
-// PENDENTE: pedir ao Instituto CNPJ, endereço, telefone, WhatsApp e e-mail.
+// PENDENTE: e-mail do Instituto.
 
 export const site = {
   nome: "Instituto João de Barro",
   slogan: "Toda ação constrói!",
-  cidade: "Rondonópolis – MT",
+  cidade: "Cuiabá – MT",
   descricao:
-    "O Instituto João de Barro promove o bem-estar, a educação e o desenvolvimento social em Rondonópolis–MT, com projetos de esporte, cultura e inclusão.",
-  cnpj: "",
-  endereco: "",
-  telefone: "",
-  whatsapp: "", // só números com DDD, ex.: 66999999999
+    "O Instituto João de Barro promove o bem-estar, a educação e o desenvolvimento social em Mato Grosso, com projetos de esporte, cultura e inclusão.",
+  razaoSocial: "Instituto João de Barro – IJB",
+  cnpj: "17.984.579/0001-77",
+  endereco: "Av. Haiti esquina com Rua Caracas, nº 610, Sala 05 – Centro Empresarial América, Cuiabá – MT, CEP 78060-618",
+  telefone: "+55 (65) 99215-1877",
+  whatsapp: "65992151877", // só números com DDD
   email: "",
   instagram: "https://www.instagram.com/institutojoaodebarromt/",
   instagramUser: "@institutojoaodebarromt",
+  facebook: "https://www.facebook.com/institutojoaodebarromt/",
 };
 
 export const nav = [
