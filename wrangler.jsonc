@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers: publica a página "em breve" (pasta em-breve) como site estático.
+  // Quando o site completo estiver pronto, trocar pelo build do Next.js.
+  "name": "instituto-joao-de-barro",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./em-breve"
+  }
+}
