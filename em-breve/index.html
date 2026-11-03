@@ -121,6 +121,15 @@
   .giro{width:30px;height:30px;border-radius:50%;border:3px solid rgba(242,235,221,.15);border-top-color:var(--caramelo);animation:gira .8s linear infinite}
   @keyframes gira{to{transform:rotate(360deg)}}
   footer{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;font-size:13px;color:#a79e8c}
+  .creditos{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .so-desk{display:none}
+  @media(min-width:900px){
+    address{max-width:none}
+    .so-mob{display:none}
+    .so-desk{display:inline}
+    .creditos{flex-direction:row;gap:0}
+    .creditos span+span::before{content:"·";margin:0 .6em}
+  }
   .entra{animation:entra .9s var(--ease) both;animation-delay:var(--d,0s)}
   @keyframes entra{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
   @keyframes zoom{to{transform:scale(1)}}
@@ -224,9 +233,11 @@
   </section>
 
   <footer class="entra" style="--d:.5s">
-    <address>Av. Haiti esquina com Rua Caracas, nº 610, Sala 05 – Centro Empresarial América<br>Cuiabá – MT · CEP 78060-618 · <a href="tel:+5565992151877" style="white-space:nowrap">+55 (65) 99215-1877</a></address>
-    <span>© 2026 Instituto João de Barro · <span style="white-space:nowrap">CNPJ 17.984.579/0001-77</span></span>
-    <span>Desenvolvido por <a href="https://mdsdigital.com.br" target="_blank" rel="noopener">MDS Digital</a></span>
+    <address>Av. Haiti esquina com Rua Caracas, nº 610, Sala 05 – Centro Empresarial América<br class="so-mob"><span class="so-desk"> · </span>Cuiabá – MT · CEP 78060-618 · <a href="tel:+5565992151877" style="white-space:nowrap">+55 (65) 99215-1877</a></address>
+    <div class="creditos">
+      <span>© 2026 Instituto João de Barro · <span style="white-space:nowrap">CNPJ 17.984.579/0001-77</span></span>
+      <span>Desenvolvido por <a href="https://mdsdigital.com.br" target="_blank" rel="noopener">MDS Digital</a></span>
+    </div>
   </footer>
 </main>
 <div class="leitor" id="leitor" role="dialog" aria-modal="true" aria-labelledby="leitor-titulo" hidden>
