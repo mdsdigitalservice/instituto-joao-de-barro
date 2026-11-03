@@ -5,5 +5,12 @@
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./em-breve"
-  }
+  },
+  // Domínios personalizados: a Cloudflare cria os registros de DNS e o certificado na publicação.
+  "routes": [
+    { "pattern": "institutojoaodebarro.org.br", "custom_domain": true },
+    { "pattern": "www.institutojoaodebarro.org.br", "custom_domain": true }
+  ],
+  // Mantém o endereço .workers.dev funcionando.
+  "workers_dev": true
 }
