@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Instituto João de Barro | Site em construção</title>
-<meta name="description" content="O novo site do Instituto João de Barro, de Cuiabá–MT, está em construção. Toda ação constrói!">
+<meta name="description" content="O novo site do Instituto João de Barro, de Cuiabá-MT, está em construção. Toda ação constrói!">
 <meta name="theme-color" content="#1d1c17">
 <meta property="og:title" content="Instituto João de Barro">
 <meta property="og:description" content="Nosso novo site está em construção. Toda ação constrói!">
@@ -113,6 +113,105 @@
   .doc:hover .olho{background:var(--marrom);transform:scale(1.1)}
   .doc:hover .capa{transform:none}
   @media(max-width:760px){.olho{width:28px;height:28px;margin:-14px 0 0 -14px}.olho svg{width:15px;height:15px}}
+  .parc-pdf{display:inline-block;margin-right:8px;padding:3px 6px;border-radius:5px;background:var(--marrom);color:var(--areia);font-size:9px;letter-spacing:.08em;vertical-align:1px}
+  .parc-doc{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid rgba(242,235,221,.14);border-radius:14px;background:rgba(242,235,221,.04);transition:border-color .2s,background .2s}
+  .parc-doc:hover{border-color:rgba(191,163,126,.5);background:rgba(242,235,221,.07)}
+  .parc-doc-link{flex:1;min-width:0;display:flex;align-items:center;gap:16px;color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+  .parc-doc-link:focus-visible{outline:2px solid var(--caramelo);outline-offset:4px;border-radius:8px}
+  .parc-doc .capa{width:54px}
+  .parc-doc:hover .olho{background:var(--marrom);transform:scale(1.1)}
+  .parc-doc-txt{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .parc-doc-nome{font-family:Poppins,sans-serif;font-weight:600;font-size:15px;line-height:1.3}
+  .parc-doc-info{font-size:12.5px;color:#a79e8c}
+  .parc-doc .baixar{flex:none}
+  /* ===== Parcerias ===== */
+  .parcerias-sec{margin-top:-24px}
+  .parcerias{list-style:none;display:grid;gap:10px;margin-top:28px}
+  .parc{border:1px solid rgba(242,235,221,.12);border-radius:18px;background:rgba(242,235,221,.035);transition:background .25s,border-color .25s}
+  .parc:hover{border-color:rgba(191,163,126,.4)}
+  .parc[open]{background:rgba(242,235,221,.06);border-color:rgba(191,163,126,.45)}
+  .parc-cab{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto auto 20px;gap:8px 22px;align-items:center;padding:18px 20px;border-radius:18px;-webkit-tap-highlight-color:transparent}
+  .parc-cab::-webkit-details-marker{display:none}
+  .parc-cab:focus-visible{outline:2px solid var(--caramelo);outline-offset:2px}
+  .parc-id{display:flex;flex-direction:column;gap:5px;min-width:0}
+  .parc-meta{font-family:Poppins,sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--caramelo)}
+  .parc-tit{font-family:Poppins,sans-serif;font-weight:600;font-size:17px;line-height:1.3;text-wrap:balance}
+  .parc-num{display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right}
+  .parc-valor{font-family:Poppins,sans-serif;font-weight:600;font-size:16px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .parc-sem{font-size:13px;font-weight:500;color:#a79e8c}
+  .parc-vig{font-size:12px;color:#8f8775;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .parc-st{justify-self:end;font:600 11px/1 Inter,sans-serif;letter-spacing:.02em;padding:7px 11px;border-radius:999px;white-space:nowrap}
+  .parc-st.vig{background:rgba(120,170,110,.18);color:#b9d8a8}
+  .parc-st.fim{background:rgba(242,235,221,.08);color:#a79e8c}
+  .parc-st.pend{background:rgba(191,163,126,.18);color:var(--caramelo)}
+  .parc-chev{width:20px;height:20px;fill:none;stroke:#a79e8c;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s var(--ease)}
+  .parc[open] .parc-chev{transform:rotate(180deg);stroke:var(--caramelo)}
+  .parc-corpo{padding:0 20px 22px;display:grid;gap:18px;animation:abre .35s var(--ease) both}
+  @keyframes abre{from{opacity:0;transform:translateY(-6px)}}
+  .parc-resumo{font-size:15.5px;line-height:1.65;color:#d7cebc;max-width:72ch}
+  .parc-extrato{display:grid;gap:10px;padding:18px;border-radius:14px;background:rgba(10,9,7,.35);font-size:14.5px;line-height:1.6;color:#d7cebc}
+  .parc-extrato b{color:var(--areia);font-weight:600}
+  .parc-inst{display:flex;flex-direction:column;gap:2px;margin-bottom:4px}
+  .parc-inst strong{font-family:Poppins,sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--caramelo)}
+  .parc-inst span{font-size:13px;color:#a79e8c}
+  .parc-dados{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px 22px;margin-top:8px;padding-top:14px;border-top:1px solid rgba(242,235,221,.1)}
+  .parc-dados dt{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#a79e8c}
+  .parc-dados dd{margin-top:3px;font-size:14px;color:var(--areia);font-variant-numeric:tabular-nums}
+  .parc-nota{font-size:13.5px;color:var(--caramelo);border-left:2px solid var(--caramelo);padding-left:12px;margin-top:6px}
+  .parc-acoes{display:flex;flex-wrap:wrap;gap:10px}
+  .parc-acoes .btn{align-self:auto;padding:12px 20px;font-size:12.5px}
+  .parc-acoes svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .parc-rodape{margin-top:22px;font-size:13px;line-height:1.6;color:#8f8775;max-width:72ch}
+  @media(max-width:760px){
+    .parcerias-sec{margin-top:-28px}
+    .parcerias{gap:8px;margin-top:22px}
+    .parc,.parc-cab{border-radius:14px}
+    .parc-cab{grid-template-columns:minmax(0,1fr) 20px;gap:10px 12px;padding:14px}
+    .parc-id{grid-column:1}
+    .parc-chev{grid-column:2;grid-row:1;align-self:start;margin-top:2px}
+    .parc-num{grid-column:1;grid-row:2;flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:2px 10px;text-align:left}
+    .parc-vig{white-space:normal}
+    .parc-st{grid-column:1;grid-row:3;justify-self:start}
+    .parc-tit{font-size:15px}
+    .parc-meta{font-size:9.5px}
+    .parc-valor{font-size:15px}
+    .parc-corpo{padding:0 14px 16px;gap:14px}
+    .parc-resumo{font-size:14.5px}
+    .parc-extrato{padding:14px;font-size:14px}
+    .parc-acoes .btn{flex:1 1 100%;justify-content:center}
+  }
+  @media(prefers-reduced-motion:reduce){.parc-corpo{animation:none}}
+  /* ===== Parcerias: cartões brancos ===== */
+  .parc{background:#fdfbf7;border-color:transparent;color:#1d1c17;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  .parc:hover{border-color:#bfa37e}
+  .parc[open]{background:#fff;border-color:#bfa37e}
+  .parc .parc-meta{color:#8c7558}
+  .parc .parc-pdf{background:#8c7558;color:#fff}
+  .parc .parc-tit,.parc .parc-valor{color:#1d1c17}
+  .parc .parc-sem{color:#6b6457}
+  .parc .parc-vig{color:#7a7264}
+  .parc .parc-st.vig{background:#e3efdc;color:#2f5a22}
+  .parc .parc-st.fim{background:#ece7dd;color:#5c5548}
+  .parc .parc-st.pend{background:#f3e8d6;color:#7a5d33}
+  .parc .parc-chev{stroke:#8c7558}
+  .parc[open] .parc-chev{stroke:#1d1c17}
+  .parc .parc-resumo{color:#3d3a32}
+  .parc .parc-extrato{background:#f4efe6;color:#3d3a32}
+  .parc .parc-extrato b{color:#1d1c17}
+  .parc .parc-inst strong{color:#7a6449}
+  .parc .parc-inst span{color:#7a7264}
+  .parc .parc-dados{border-top-color:rgba(29,28,23,.1)}
+  .parc .parc-dados dt{color:#7a7264}
+  .parc .parc-dados dd{color:#1d1c17}
+  .parc .parc-nota{color:#7a5d33;border-left-color:#bfa37e}
+  .parc .parc-doc{background:#fff;border-color:rgba(29,28,23,.12)}
+  .parc .parc-doc:hover{background:#faf6ef;border-color:#bfa37e}
+  .parc .parc-doc .capa{box-shadow:0 3px 10px rgba(0,0,0,.18);outline:1px solid rgba(29,28,23,.08)}
+  .parc .parc-doc-nome{color:#1d1c17}
+  .parc .parc-doc-info{color:#7a7264}
+  .parc .baixar{color:#1d1c17;border-color:rgba(29,28,23,.2);background:none}
+  .parc .baixar:hover{background:#f3e8d6;border-color:#8c7558}
+  .parc .parc-cab:focus-visible,.parc .parc-doc-link:focus-visible{outline-color:#8c7558}
   /* Leitor de PDF */
   html.leitor-aberto{overflow:hidden}
   .leitor{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;background:#12110e}
@@ -155,7 +254,7 @@
 
   <div class="paineis">
     <section class="marrom entra" style="--d:.15s">
-      <p class="k" style="opacity:.85">Cuiabá – MT</p>
+      <p class="k" style="opacity:.85">Cuiabá - MT</p>
       <h1>Site em<br>construção</h1>
       <p class="slogan">Toda ação constrói!</p>
     </section>
@@ -178,7 +277,7 @@
     <h2 id="t-transp">Documentos oficiais</h2>
     <p class="intro">O Instituto João de Barro torna públicos seu estatuto, seus documentos de constituição e a composição da sua diretoria, para que qualquer pessoa possa consultar como a entidade está organizada.</p>
     <dl class="ficha">
-      <div><dt>Razão social</dt><dd>Instituto João de Barro – IJB</dd></div>
+      <div><dt>Razão social</dt><dd>Instituto João de Barro - IJB</dd></div>
       <div><dt>CNPJ</dt><dd>17.984.579/0001-77</dd></div>
       <div><dt>Natureza jurídica</dt><dd>Associação privada sem fins lucrativos</dd></div>
       <div><dt>Fundação</dt><dd>10/04/2013</dd></div>
@@ -211,7 +310,7 @@
         <div class="doc-txt">
           <p class="meta">Constituição<span> · 21/10/2024</span></p>
           <h3><a class="doc-link" href="documentos/ata-age-2024-alteracao-denominacao.pdf" target="_blank" rel="noopener">Ata da Assembleia Geral Extraordinária</a></h3>
-          <p class="desc">Assembleia que alterou a denominação de Instituto Brasil Benefícios para Instituto João de Barro – IJB, com novos objetivos e endereço, registrada em cartório.</p>
+          <p class="desc">Assembleia que alterou a denominação de Instituto Brasil Benefícios para Instituto João de Barro - IJB, com novos objetivos e endereço, registrada em cartório.</p>
           <p class="info">PDF · 31 páginas</p>
         </div>
         <svg class="seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
@@ -242,8 +341,149 @@
     </ul>
   </section>
 
+  <section class="transp parcerias-sec entra" id="parcerias" style="--d:.5s" aria-labelledby="t-parc">
+    <p class="k" style="color:var(--caramelo)">Transparência</p>
+    <h2 id="t-parc">Parcerias e termos de fomento</h2>
+    <p class="intro">Em cumprimento ao art. 11 da Lei nº 13.019/2014 (Marco Regulatório das Organizações da Sociedade Civil), o Instituto João de Barro divulga as parcerias que celebra com o poder público e com outras organizações. Cada parceria traz o objeto, o valor, a vigência e a origem do recurso, conforme a publicação oficial, que pode ser consultada e baixada.</p>
+    <ul class="parcerias">
+      <li><details class="parc">
+        <summary class="parc-cab">
+          <span class="parc-id"><span class="parc-meta"><span class="parc-pdf">PDF</span>Esporte · SECEL/MT - FUNDED</span><span class="parc-tit">XI Copa Matogrossense de Futebol Master - 2025</span></span>
+          <span class="parc-num"><span class="parc-valor">R$ 150.000,00</span><span class="parc-vig">15/08/2025 a 20/12/2025</span></span>
+          <span class="parc-st fim" data-fim="2025-12-20">Encerrada</span>
+          <svg class="parc-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="parc-corpo">
+          <p class="parc-resumo">Parceria destinada à organização e realização da XI Copa Matogrossense de Futebol Master - 2025, em Rondonópolis/MT, promovendo a prática esportiva na categoria master e a participação comunitária por meio do futebol.</p>
+          <div class="parc-extrato">
+            <p class="parc-inst"><strong>Extrato do Termo de Fomento nº 1983-2025/SECEL</strong><span>Processo SECEL-PRO-2025/06796</span></p>
+            <p><b>Partes:</b> Secretaria de Estado de Cultura, Esporte e Lazer de Mato Grosso - SECEL/MT, CNPJ nº 58.240.555/0001-90, por meio do Fundo de Desenvolvimento Desportivo do Estado de Mato Grosso - FUNDED, CNPJ nº 01.755.662/0001-34, e Instituto João de Barro - IJB, CNPJ nº 17.984.579/0001-77.</p>
+            <p><b>Objeto:</b> Organização e realização da XI Copa Matogrossense de Futebol Master - 2025.</p>
+            <dl class="parc-dados"><div><dt>Número do termo</dt><dd>1983-2025/SECEL</dd></div><div><dt>Processo</dt><dd>SECEL-PRO-2025/06796</dd></div><div><dt>Órgão parceiro</dt><dd>SECEL/MT - FUNDED</dd></div><div><dt>Valor total</dt><dd>R$ 150.000,00</dd></div><div><dt>Vigência publicada</dt><dd>15/08/2025 a 20/12/2025</dd></div><div><dt>Origem do recurso</dt><dd>Emenda Parlamentar nº 48, do deputado estadual Nininho</dd></div><div><dt>Empenho</dt><dd>23601.0001.25.000520-4, de 29/07/2025</dd></div><div><dt>Fiscal indicado</dt><dd>Eberton Neres Barros - matrícula 321406</dd></div><div><dt>Publicação</dt><dd>Diário Oficial do Estado de Mato Grosso, 19/08/2025, página 85</dd></div></dl>
+            
+          </div>
+          <div class="parc-doc">
+            <a class="ver-pdf parc-doc-link" href="documentos/parcerias/do-mt-2025-08-19-copa-master.pdf" target="_blank" rel="noopener" data-titulo="Publicação no Diário Oficial - XI Copa Matogrossense de Futebol Master - 2025"><span class="capa-box"><img class="capa" src="documentos/parcerias/capas/do-mt-2025-08-19-copa-master.jpg" alt="" width="200" height="283" loading="lazy"><span class="olho" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></span><span class="parc-doc-txt"><span class="parc-doc-nome">Publicação no Diário Oficial</span><span class="parc-doc-info">PDF · toque para visualizar</span></span></a>
+            <a class="baixar" href="documentos/parcerias/do-mt-2025-08-19-copa-master.pdf" download aria-label="Baixar publicação no Diário Oficial"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
+          </div>
+        </div>
+      </details></li>
+      <li><details class="parc">
+        <summary class="parc-cab">
+          <span class="parc-id"><span class="parc-meta"><span class="parc-pdf">PDF</span>Esporte · SECEL/MT - FUNDED</span><span class="parc-tit">Torneio Xás Crianças Sub-13 Masculino</span></span>
+          <span class="parc-num"><span class="parc-valor">R$ 286.419,32</span><span class="parc-vig">01/06/2026 a 30/06/2026</span></span>
+          <span class="parc-st fim" data-fim="2026-06-30">Encerrada</span>
+          <svg class="parc-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="parc-corpo">
+          <p class="parc-resumo">Parceria destinada à realização de competição de futebol de campo para o público infantojuvenil, com participação de 12 equipes no Campo do Bairro Araés, em Cuiabá/MT, ampliando as oportunidades de participação no esporte de base.</p>
+          <div class="parc-extrato">
+            <p class="parc-inst"><strong>Extrato do Termo de Fomento nº 1172-2026/FUNDED</strong><span>Processo SECEL-PRO-2026/02833</span></p>
+            <p><b>Partes:</b> Secretaria de Estado de Cultura, Esporte e Lazer de Mato Grosso - SECEL/MT, CNPJ nº 58.240.555/0001-90, por meio do FUNDED, CNPJ nº 01.755.662/0001-34, e Instituto João de Barro - IJB, CNPJ nº 17.984.579/0001-77.</p>
+            <p><b>Objeto:</b> Realização do Torneio Xás Crianças Sub-13 Masculino, competição esportiva de futebol de campo voltada ao público infantojuvenil, com participação de 12 equipes, no Campo do Bairro Araés, em Cuiabá/MT.</p>
+            <dl class="parc-dados"><div><dt>Número do termo</dt><dd>1172-2026/FUNDED</dd></div><div><dt>Processo</dt><dd>SECEL-PRO-2026/02833</dd></div><div><dt>Órgão parceiro</dt><dd>SECEL/MT - FUNDED</dd></div><div><dt>Valor total</dt><dd>R$ 286.419,32</dd></div><div><dt>Vigência publicada</dt><dd>01/06/2026 a 30/06/2026</dd></div><div><dt>Origem do recurso</dt><dd>Emenda Parlamentar nº 163/2026, do deputado estadual Max Russi</dd></div><div><dt>Empenho</dt><dd>23601.0001.26.000405-0, de 05/05/2026</dd></div><div><dt>Gestora indicada</dt><dd>Gabriela Rodrigues de Souza - matrícula 348091</dd></div><div><dt>Comissão de Monitoramento e Avaliação</dt><dd>Portaria nº 32/2026/SECEL-MT</dd></div><div><dt>Publicação</dt><dd>Diário Oficial do Estado de Mato Grosso, 03/06/2026, página 57</dd></div></dl>
+            
+          </div>
+          <div class="parc-doc">
+            <a class="ver-pdf parc-doc-link" href="documentos/parcerias/do-mt-2026-06-03-xas-criancas.pdf" target="_blank" rel="noopener" data-titulo="Publicação no Diário Oficial - Torneio Xás Crianças Sub-13 Masculino"><span class="capa-box"><img class="capa" src="documentos/parcerias/capas/do-mt-2026-06-03-xas-criancas.jpg" alt="" width="200" height="283" loading="lazy"><span class="olho" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></span><span class="parc-doc-txt"><span class="parc-doc-nome">Publicação no Diário Oficial</span><span class="parc-doc-info">PDF · toque para visualizar</span></span></a>
+            <a class="baixar" href="documentos/parcerias/do-mt-2026-06-03-xas-criancas.pdf" download aria-label="Baixar publicação no Diário Oficial"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
+          </div>
+        </div>
+      </details></li>
+      <li><details class="parc">
+        <summary class="parc-cab">
+          <span class="parc-id"><span class="parc-meta"><span class="parc-pdf">PDF</span>Esporte · SECEL/MT - FUNDED</span><span class="parc-tit">Karatê em Movimento</span></span>
+          <span class="parc-num"><span class="parc-valor">R$ 200.000,00</span><span class="parc-vig">13/08/2026 a 09/08/2027</span></span>
+          <span class="parc-st vig" data-fim="2027-08-09">Em vigência</span>
+          <svg class="parc-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="parc-corpo">
+          <p class="parc-resumo">Projeto que reúne formação esportiva gratuita e realização de competições de karatê. Prevê 150 vagas ativas por mês para crianças e adolescentes de 7 a 17 anos, em Rondonópolis, durante 12 meses, além de etapas esportivas em Sinop, Cuiabá e Rondonópolis.</p>
+          <div class="parc-extrato">
+            <p class="parc-inst"><strong>Extrato do Termo de Fomento nº 1865-2026/FUNDED</strong><span>Processo SECEL-PRO-2026/05014</span></p>
+            <p><b>Partes:</b> Secretaria de Estado de Cultura, Esporte e Lazer de Mato Grosso - SECEL/MT, CNPJ nº 58.240.555/0001-90, por meio do FUNDED, CNPJ nº 01.755.662/0001-34, e Instituto João de Barro - IJB, CNPJ nº 17.984.579/0001-77.</p>
+            <p><b>Objeto:</b> Organização e execução do projeto Karatê em Movimento, estruturado em três eixos: oferta gratuita de aulas para crianças e adolescentes, com 150 vagas ativas mensais em três núcleos durante 12 meses; execução da 3ª Etapa Regional do Campeonato Estadual de Karatê 2026, em Sinop, e da Etapa Final Estadual, em Cuiabá; e execução da Copa Delta de Karatê 2026, em Rondonópolis.</p>
+            <dl class="parc-dados"><div><dt>Número do termo</dt><dd>1865-2026/FUNDED</dd></div><div><dt>Processo</dt><dd>SECEL-PRO-2026/05014</dd></div><div><dt>Órgão parceiro</dt><dd>SECEL/MT - FUNDED</dd></div><div><dt>Valor total</dt><dd>R$ 200.000,00</dd></div><div><dt>Vigência publicada</dt><dd>13/08/2026 a 09/08/2027</dd></div><div><dt>Origem do recurso</dt><dd>Emenda Parlamentar nº 106/2026, do deputado estadual Ondanir Bortolini - Nininho</dd></div><div><dt>Empenho</dt><dd>23601.0001.26.000721-1, de 08/07/2026</dd></div><div><dt>Gestor indicado</dt><dd>Jediel Elienai Paes Farias - matrícula 362323</dd></div><div><dt>Comissão de Monitoramento e Avaliação</dt><dd>Portaria nº 32/2026/SECEL-MT</dd></div><div><dt>Publicação</dt><dd>Diário Oficial do Estado de Mato Grosso nº 29.295, 14/08/2026, página 40</dd></div></dl>
+            
+          </div>
+          <div class="parc-doc">
+            <a class="ver-pdf parc-doc-link" href="documentos/parcerias/do-mt-2026-08-14-pag-40.pdf" target="_blank" rel="noopener" data-titulo="Publicação no Diário Oficial - Karatê em Movimento"><span class="capa-box"><img class="capa" src="documentos/parcerias/capas/do-mt-2026-08-14-pag-40.jpg" alt="" width="200" height="283" loading="lazy"><span class="olho" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></span><span class="parc-doc-txt"><span class="parc-doc-nome">Publicação no Diário Oficial</span><span class="parc-doc-info">PDF · toque para visualizar</span></span></a>
+            <a class="baixar" href="documentos/parcerias/do-mt-2026-08-14-pag-40.pdf" download aria-label="Baixar publicação no Diário Oficial"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
+          </div>
+        </div>
+      </details></li>
+      <li><details class="parc">
+        <summary class="parc-cab">
+          <span class="parc-id"><span class="parc-meta"><span class="parc-pdf">PDF</span>Cultura · SECEL/MT</span><span class="parc-tit">Festival de Cultura Gospel - Etapa Canta Rondonópolis</span></span>
+          <span class="parc-num"><span class="parc-valor">R$ 300.000,00</span><span class="parc-vig">Vigência original até 30/09/2026</span></span>
+          <span class="parc-st pend">Prorrogação a publicar</span>
+          <svg class="parc-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="parc-corpo">
+          <p class="parc-resumo">Ação cultural gratuita voltada à valorização e circulação da música gospel em Rondonópolis/MT. O projeto contempla inscrições artísticas, duas etapas classificatórias, uma grande final e uma mostra cultural, com oportunidades de apresentação para artistas amadores nas modalidades solo e dupla.</p>
+          <div class="parc-extrato">
+            <p class="parc-inst"><strong>Extrato do Termo de Fomento nº 1156-2026/SECEL</strong><span>Processo SECEL-PRO-2026/02822</span></p>
+            <p><b>Partes:</b> Secretaria de Estado de Cultura, Esporte e Lazer de Mato Grosso - SECEL/MT, CNPJ nº 58.240.555/0001-90, e Instituto João de Barro - IJB, CNPJ nº 17.984.579/0001-77.</p>
+            <p><b>Objeto:</b> Execução direta do Festival de Cultura Gospel - Etapa Canta Rondonópolis, com disponibilização de até 120 inscrições gratuitas, habilitação de até 60 participações artísticas e atendimento direto estimado de 60 a 120 artistas amadores. A programação prevê duas classificatórias, seleção de 20 participações finalistas, uma grande final, entrega de 20 troféus, cinco premiações culturais no total de R$ 15.000,00 e uma Mostra Cultural dos Destaques. O extrato estabelece estimativas de até 6.000 presenças acumuladas nas quatro ações presenciais e alcance digital de até 20.000 pessoas.</p>
+            <dl class="parc-dados"><div><dt>Número do termo</dt><dd>1156-2026/SECEL</dd></div><div><dt>Processo</dt><dd>SECEL-PRO-2026/02822</dd></div><div><dt>Órgão parceiro</dt><dd>SECEL/MT</dd></div><div><dt>Valor total</dt><dd>R$ 300.000,00</dd></div><div><dt>Vigência original publicada</dt><dd>13/08/2026 a 30/09/2026</dd></div><div><dt>Origem do recurso</dt><dd>Emenda Parlamentar nº 058/2026, do deputado estadual Sebastião Rezende</dd></div><div><dt>Empenho</dt><dd>23101.0001.26.000381-6, de 05/05/2026</dd></div><div><dt>Gestora indicada</dt><dd>Marielen dos Santos de Assis - matrícula 350487</dd></div><div><dt>Comissão de Monitoramento e Avaliação</dt><dd>Portaria nº 26/2026/SECEL-MT</dd></div><div><dt>Publicação</dt><dd>Diário Oficial do Estado de Mato Grosso nº 29.295, 14/08/2026, página 40</dd></div></dl>
+            <p class="parc-nota">A vigência foi prorrogada. A publicação da prorrogação será incluída aqui assim que disponível.</p>
+          </div>
+          <div class="parc-doc">
+            <a class="ver-pdf parc-doc-link" href="documentos/parcerias/do-mt-2026-08-14-pag-40.pdf" target="_blank" rel="noopener" data-titulo="Publicação no Diário Oficial - Festival de Cultura Gospel - Etapa Canta Rondonópolis"><span class="capa-box"><img class="capa" src="documentos/parcerias/capas/do-mt-2026-08-14-pag-40.jpg" alt="" width="200" height="283" loading="lazy"><span class="olho" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></span><span class="parc-doc-txt"><span class="parc-doc-nome">Publicação no Diário Oficial</span><span class="parc-doc-info">PDF · toque para visualizar</span></span></a>
+            <a class="baixar" href="documentos/parcerias/do-mt-2026-08-14-pag-40.pdf" download aria-label="Baixar publicação no Diário Oficial"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
+          </div>
+        </div>
+      </details></li>
+      <li><details class="parc">
+        <summary class="parc-cab">
+          <span class="parc-id"><span class="parc-meta"><span class="parc-pdf">PDF</span>Esporte · Prefeitura de Rondonópolis</span><span class="parc-tit">1ª Copa Craques do Amanhã de Futebol de Base</span></span>
+          <span class="parc-num"><span class="parc-valor parc-sem">Valor a publicar</span><span class="parc-vig">Justificativa publicada em 01/09/2026</span></span>
+          <span class="parc-st pend">Termo em formalização</span>
+          <svg class="parc-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="parc-corpo">
+          <p class="parc-resumo">Projeto destinado à ampliação do acesso gratuito de crianças ao futebol de base, contemplando as categorias Sub-07 a Sub-12. A publicação prevê até 1.200 beneficiários diretos, 48 participações de equipes e 96 partidas oficiais, incentivando a iniciação esportiva e a integração entre atletas, famílias e comunidade.</p>
+          <div class="parc-extrato">
+            <p class="parc-inst"><strong>Justificativa de inexigibilidade de chamamento público</strong><span>DIORONDON-e nº 6.268, edição suplementar</span></p>
+            <p><b>Entidades envolvidas:</b> Município de Rondonópolis, por intermédio da Secretaria Municipal de Educação, Cultura, Esporte e Lazer, e Instituto João de Barro - IJB, CNPJ nº 17.984.579/0001-77.</p>
+            <p><b>Objeto:</b> Execução do projeto 1ª Copa Craques do Amanhã de Futebol de Base, com acesso gratuito para equipes, atletas e público.</p>
+            <dl class="parc-dados"><div><dt>Órgão parceiro</dt><dd>Prefeitura de Rondonópolis - Secretaria Municipal de Educação, Cultura, Esporte e Lazer</dd></div><div><dt>Lei autorizativa</dt><dd>Lei Municipal nº 15.002, de 27/08/2026</dd></div><div><dt>Publicação da lei</dt><dd>DIORONDON-e nº 6.266, de 28/08/2026</dd></div><div><dt>Documento disponibilizado</dt><dd>Justificativa de inexigibilidade de chamamento público</dd></div><div><dt>Publicação</dt><dd>DIORONDON-e nº 6.268, edição suplementar de 01/09/2026, páginas 45 e 46</dd></div></dl>
+            <p class="parc-nota">Número do termo, processo, valor e vigência serão publicados aqui após a assinatura do instrumento.</p>
+          </div>
+          <div class="parc-doc">
+            <a class="ver-pdf parc-doc-link" href="documentos/parcerias/diorondon-2026-09-01-craques-do-amanha.pdf" target="_blank" rel="noopener" data-titulo="Publicação da justificativa no Diário Oficial - 1ª Copa Craques do Amanhã de Futebol de Base"><span class="capa-box"><img class="capa" src="documentos/parcerias/capas/diorondon-2026-09-01-craques-do-amanha.jpg" alt="" width="200" height="283" loading="lazy"><span class="olho" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></span><span class="parc-doc-txt"><span class="parc-doc-nome">Publicação da justificativa no Diário Oficial</span><span class="parc-doc-info">PDF · toque para visualizar</span></span></a>
+            <a class="baixar" href="documentos/parcerias/diorondon-2026-09-01-craques-do-amanha.pdf" download aria-label="Baixar publicação da justificativa"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
+          </div>
+        </div>
+      </details></li>
+      <li><details class="parc">
+        <summary class="parc-cab">
+          <span class="parc-id"><span class="parc-meta"><span class="parc-pdf">PDF</span>Capacitação · Instituto Rede Mulher Empreendedora - IRME</span><span class="parc-tit">Impacto Feminino - Programa de Aceleração de Organizações da Sociedade Civil</span></span>
+          <span class="parc-num"><span class="parc-valor">R$ 8.310,33</span><span class="parc-vig">Até 31/08/2026</span></span>
+          <span class="parc-st fim" data-fim="2026-08-31">Encerrada</span>
+          <svg class="parc-chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+        </summary>
+        <div class="parc-corpo">
+          <p class="parc-resumo">Parceria com o Instituto Rede Mulher Empreendedora - IRME para participação do Instituto João de Barro em uma jornada de capacitação, mentorias e execução de ação prática territorial. O programa promove o fortalecimento institucional de organizações lideradas por mulheres e o desenvolvimento de iniciativas de impacto comunitário.</p>
+          <div class="parc-extrato">
+            <p class="parc-inst"><strong>Termo de Parceria entre o IRME e o Instituto João de Barro</strong></p>
+            <p><b>Partes:</b> Instituto Rede Mulher Empreendedora - IRME, CNPJ nº 29.305.842/0001-33, e Instituto João de Barro - IJB, CNPJ nº 17.984.579/0001-77.</p>
+            <p><b>Objeto:</b> Participação do Instituto João de Barro no projeto Impacto Feminino - Programa de Aceleração de Organizações da Sociedade Civil, compreendendo capacitações, mentorias técnicas e execução de ação prática em seu território.</p>
+            <dl class="parc-dados"><div><dt>Instrumento do IJB</dt><dd>Termo de Parceria com o IRME, sem numeração indicada no documento</dd></div><div><dt>Instrumento federal de referência</dt><dd>Termo de Fomento nº 985277/2025, firmado entre o IRME e o Ministério do Empreendedorismo, da Microempresa e da Empresa de Pequeno Porte - MEMP</dd></div><div><dt>Seleção</dt><dd>Edital de Chamamento Público nº 03/2026</dd></div><div><dt>Entidade parceira direta</dt><dd>Instituto Rede Mulher Empreendedora - IRME</dd></div><div><dt>Repasse financeiro previsto</dt><dd>R$ 8.310,33</dd></div><div><dt>Apoio material previsto</dt><dd>Doação de um tablet</dd></div><div><dt>Prazo previsto no termo</dt><dd>Até 31/08/2026</dd></div><div><dt>Documento disponibilizado</dt><dd>Termo de Parceria</dd></div></dl>
+            <p class="parc-nota">O Termo de Fomento nº 985277/2025 é o instrumento federal do programa, celebrado entre o IRME e o MEMP. O Instituto João de Barro participa por meio do Termo de Parceria com o IRME.</p>
+          </div>
+          <div class="parc-doc">
+            <a class="ver-pdf parc-doc-link" href="documentos/parcerias/termo-parceria-irme-impacto-feminino.pdf" target="_blank" rel="noopener" data-titulo="Termo de Parceria - Impacto Feminino - Programa de Aceleração de Organizações da Sociedade Civil"><span class="capa-box"><img class="capa" src="documentos/parcerias/capas/termo-parceria-irme-impacto-feminino.jpg" alt="" width="200" height="283" loading="lazy"><span class="olho" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></span><span class="parc-doc-txt"><span class="parc-doc-nome">Termo de Parceria</span><span class="parc-doc-info">PDF · toque para visualizar</span></span></a>
+            <a class="baixar" href="documentos/parcerias/termo-parceria-irme-impacto-feminino.pdf" download aria-label="Baixar Termo de Parceria"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg></a>
+          </div>
+        </div>
+      </details></li>
+    </ul>
+    <p class="parc-rodape">As informações reproduzem os extratos publicados nos Diários Oficiais e nos instrumentos assinados. Dúvidas sobre as parcerias podem ser enviadas pelos canais de contato do Instituto.</p>
+  </section>
+
   <footer class="entra" style="--d:.5s">
-    <address>Av. Haiti esquina com Rua Caracas, nº 610, Sala 05 – Centro Empresarial América<br class="so-mob"><span class="so-desk"> · </span>Cuiabá – MT · CEP 78060-618 · <a href="tel:+5565992151877" style="white-space:nowrap">+55 (65) 99215-1877</a></address>
+    <address>Av. Haiti esquina com Rua Caracas, nº 610, Sala 05 - Centro Empresarial América<br class="so-mob"><span class="so-desk"> · </span>Cuiabá - MT · CEP 78060-618 · <a href="tel:+5565992151877" style="white-space:nowrap">+55 (65) 99215-1877</a></address>
     <div class="creditos">
       <span>© 2026 Instituto João de Barro · <span style="white-space:nowrap">CNPJ 17.984.579/0001-77</span></span>
       <span>Desenvolvido por <a href="https://mdsdigital.com.br" target="_blank" rel="noopener">MDS Digital</a></span>
@@ -317,17 +557,20 @@
   }
   function pedirFechar(){ if(history.state&&history.state.leitor) history.back(); else encerrar(); }
 
-  document.querySelectorAll('.doc-link').forEach(function(a){
+  document.querySelectorAll('.doc-link, .ver-pdf').forEach(function(a){
     a.addEventListener('click',function(ev){
       if(ev.ctrlKey||ev.metaKey||ev.shiftKey) return;
       ev.preventDefault();
-      abrir(a.getAttribute('href'),a.textContent,a);
+      abrir(a.getAttribute('href'),a.dataset.titulo||a.textContent,a);
     });
   });
   fechar.addEventListener('click',pedirFechar);
   window.addEventListener('popstate',function(){ if(!leitor.hidden) encerrar(); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!leitor.hidden) pedirFechar(); });
 })();
+</script>
+<script>
+(function(){var h=new Date().toISOString().slice(0,10);document.querySelectorAll('.parc-st[data-fim]').forEach(function(e){var enc=e.dataset.fim<h;e.textContent=enc?'Encerrada':'Em vigência';e.className='parc-st '+(enc?'fim':'vig');});})();
 </script>
 </body>
 </html>
